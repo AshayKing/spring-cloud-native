@@ -27,15 +27,15 @@ public class OAuthClientConfiguration extends WebMvcConfigurerAdapter {
 	@Qualifier("tokenRelayRequestInterceptor")
 	HandlerInterceptor tokenRelayHandlerInterceptor;
 
-	@Override
-	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(this.tokenRelayHandlerInterceptor);
-	}
-
 	@Bean
 	@LoadBalanced
 	public OAuth2RestTemplate restTemplate(OAuth2ProtectedResourceDetails resource, OAuth2ClientContext context) {
 		return new OAuth2RestTemplate(resource, context);
+	}
+	
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		registry.addInterceptor(this.tokenRelayHandlerInterceptor);
 	}
 
 }
