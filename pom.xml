@@ -23,6 +23,7 @@
 		<module>task-service</module>
 		<module>comments-service</module>
 		<module>zipkin-server</module>
+		<module>web-portal</module>
 	</modules>
 
 	<properties>
