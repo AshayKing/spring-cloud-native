@@ -18,6 +18,11 @@
 		<module>config-server</module>
 		<module>service-registry</module>
 		<module>auth-server</module>
+		<module>api-gateway</module>
+		<module>user-service</module>
+		<module>task-service</module>
+		<module>comments-service</module>
+		<module>zipkin-server</module>
 	</modules>
 
 	<properties>
